@@ -72,3 +72,7 @@ class Docaptcha:
 				print(" Could not understand audio")
 			except sr.RequestError as e:
 				print("Error: {0}".format(e))
+			if os.path.exists('audio.mp3'):
+				os.remove('audio.mp3')
+			if os.path.exists('audio.wav'):
+				os.remove('audio.wav')
